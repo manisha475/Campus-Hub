@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Campus Hub</string>
+    <string name="subject_hint">Subject</string>
+    <string name="year_hint">Year</string>
+    <string name="semester_hint">Semester</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+    <string-array name="subjects">
+        <item>Math</item>
+        <item>Science</item>
+        <item>History</item>
+        <item>English</item>
+    </string-array>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+    <!-- Add branch options here -->
+    <string-array name="branches_array">
+        <item>Aerospace Engineering</item>
+        <item>Biomedical Engineering</item>
+        <item>Biotechnology Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Information Technology</item>
+        <item>Civil Engineering</item>
+        <item>Computer Science Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Environmental Engineering</item>
+        <item>Industrial Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Petroleum Engineering</item>
+    </string-array>
+
+    <string name="floating_button_description">Add a new item</string>
+
+    <string name="title_activity_adminlogin">adminlogin</string>
+
+
+</resources>

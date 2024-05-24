@@ -1,0 +1,19 @@
+<resources>
+
+    <style name="Widget.Theme.P2.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.P2.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="Widget.MyApp.Spinner" parent="Widget.AppCompat.Spinner">
+        <!-- Customize spinner background -->
+        <item name="android:background">@drawable/edittext_border</item>
+        <!-- Customize spinner text appearance -->
+        <item name="android:textColor">@color/black</item>
+        <!-- Add any other customizations here -->
+    </style>
+</resources>
