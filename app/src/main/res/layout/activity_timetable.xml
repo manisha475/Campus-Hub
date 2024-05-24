@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".dashboard">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/backButton" />
+
+    <!-- Purple-colored toolbar with the app name -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="TimeTable"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Spinner heading TextView -->
+    <TextView
+        android:id="@+id/spinner_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- TextView head placed to the right of spinner heading -->
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/toolbar"
+        android:layout_toEndOf="@+id/spinner_heading"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Buttons GridLayout -->
+    <GridLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <!-- Button 1 -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MON"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Button 2 -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TUE"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WED"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Button 4 -->
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THU"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Button 5 -->
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FRI"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Button 6 -->
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAT"/>
+    </GridLayout>
+
+    <!-- TextView below GridLayout -->
+    <TextView
+        android:id="@+id/belowGridTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3rd Saturday Holiday"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/buttonsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/belowGridTextView"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+</RelativeLayout>

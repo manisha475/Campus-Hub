@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Event.eventdescription">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:alpha="0.1"
+        android:scaleType="fitCenter" />
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Description"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Event Image -->
+    <ImageView
+        android:id="@+id/eventimg"
+        android:layout_width="500dp"
+        android:layout_height="330dp"
+        android:layout_below="@id/toolbar"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+        android:layout_marginTop="16dp" />
+
+    <!-- Event Description TextView -->
+    <TextView
+        android:id="@+id/eventdes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventimg"
+        android:text="The festival originates from a legend about the god Krishna and his wife, Radha. In one version of the legend, Shiva was in a deep meditation when his wife, Parvati, asked Lord Kama (cupid) to strike Shiva with his love arrow. Shiva burnt Kama to ashes in anger for ruining his meditation. Upset by this act, Parvati and her wife, Rati, meditated for 40 days to bring Kama back to life. On the 40th day, Kama revived from ashes, and the day is celebrated as Holi."
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/eventlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventdes"
+        android:text="Additional Text Here"
+        android:textColorLink="#0000FF"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:autoLink="web"
+        android:linksClickable="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Feedback.Feedback">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:alpha="0.3"
+        android:scaleType="fitCenter" />
+
+    <!-- Purple-colored toolbar with the app name -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Feedback"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- TextView below the toolbar -->
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="We would like your feedback to improve our App"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="What is your opinion of this App?"
+        android:layout_below="@id/t1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"/>
+
+    <!-- Add 5 ImageViews horizontally with reduced size -->
+    <ImageView
+        android:id="@+id/i1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/excellent"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/i2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/good"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/i1"/>
+
+    <ImageView
+        android:id="@+id/i3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/fair"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/i2"/>
+
+    <ImageView
+        android:id="@+id/i4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/poor"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/i3"/>
+
+    <ImageView
+        android:id="@+id/i5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/bad"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/i4"/>
+
+    <!-- Straight line below ImageViews i1 to i5 -->
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/i1"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TextView below the line -->
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Please Select your feedback Category!"
+        android:layout_below="@id/line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- LinearLayout for the buttons -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/category"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <!-- Three buttons -->
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Suggestion"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Something is&#10;not quite right"
+
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="16dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/buttonLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <!-- Third button in the second row -->
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Compliment"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black"
+        android:layout_below="@id/buttonLayout2"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/belowLineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="Please Leave your Feedback Below:"
+        android:layout_below="@id/bline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- EditText below the TextView -->
+    <EditText
+        android:id="@+id/feedbox"
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:hint="... "
+        android:layout_below="@id/belowLineTextView"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:background="@drawable/edittext_border" />
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_below="@id/feedbox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+
+
+</RelativeLayout>

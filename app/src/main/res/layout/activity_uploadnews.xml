@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".admin.uploadnews">
+
+    <!-- ImageView for Logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:alpha="0.1"
+        android:scaleType="fitCenter" />
+
+    <!-- Purple-colored toolbar with the app name -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- EditTexts for displaying news headlines, content, and date -->
+    <EditText
+        android:id="@+id/headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="headline"
+        android:minHeight="48dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:hint="content"
+        android:minHeight="48dp"
+        android:textSize="18sp" />
+
+    <!-- EditText for selecting date -->
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:focusable="false"
+        android:hint="Select Date"
+        android:minHeight="48dp"
+        android:onClick="showDatePicker"
+        android:textSize="18sp" />
+
+    <!-- ImageView -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/date"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/capture" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/selectfromgallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Select from Gallery"/>
+
+    <!-- Spinner -->
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectfromgallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp" />
+
+    <!-- Button below Spinner -->
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:text="upload" />
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:id="@+id/newsitem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/imglost"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- PDF name -->
+        <TextView
+            android:id="@+id/Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:text="Headline" />
+
+        <!-- New TextView below the PDF name -->
+        <TextView
+            android:id="@+id/Source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:text="Source"
+            android:layout_marginBottom="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".news.News">
+
+    <!-- ImageView for Logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:alpha="0.3"
+        android:scaleType="fitCenter" />
+
+    <!-- Purple-colored toolbar with the app name -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- HorizontalScrollView for scrollable Buttons -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Example Buttons with borders -->
+            <Button
+                android:id="@+id/placements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Placements "
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/edittext_border" />
+
+            <Button
+                android:id="@+id/alumni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Alumni "
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/edittext_border" />
+
+            <Button
+                android:id="@+id/clubs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Clubs "
+                android:textSize="18sp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/edittext_border" />
+
+            <Button
+                android:id="@+id/innovations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Innovations "
+                android:textSize="16sp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/edittext_border"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!-- RecyclerView below the HorizontalScrollView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalScrollView"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

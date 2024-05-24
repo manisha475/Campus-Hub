@@ -1,0 +1,39 @@
+<!-- pdf_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="horizontal">
+
+    <!-- PDF icon -->
+    <ImageView
+        android:id="@+id/pdfIconImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/pdficon"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Vertical layout to hold PDF name and subject name -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- PDF name -->
+        <TextView
+            android:id="@+id/pdfNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:text="PDF Name" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

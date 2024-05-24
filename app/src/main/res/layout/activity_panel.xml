@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".panel">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:alpha="0.3"
+        android:scaleType="fitCenter" />
+
+    <!-- Purple-colored toolbar with the app name -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#800080"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAMPUS HUB"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- First new ImageView -->
+    <ImageView
+        android:id="@+id/admin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/panela" />
+
+    <!-- TextView below admin ImageView -->
+    <TextView
+        android:id="@+id/adminText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin"
+        android:layout_centerHorizontal="true"
+        android:text="Admin"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Second new ImageView -->
+    <ImageView
+        android:id="@+id/student"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/panels"
+        android:layout_below="@id/adminText"
+        android:layout_marginTop="270dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- TextView below student ImageView -->
+    <TextView
+        android:id="@+id/studentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/student"
+        android:layout_centerHorizontal="true"
+        android:text="Student"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</RelativeLayout>
